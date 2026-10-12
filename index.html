@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style type="text/css">
         * {
@@ -21,10 +23,10 @@
         }
 
         .banxin {
-            width: 1080px;
-            max-width: 100%;
+            width: 100%;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 30px 40px;
+            padding: 20px 16px 30px;
             flex: 1;
             background-color: white;
         }
@@ -34,63 +36,109 @@
         }
 
         .top img {
-            width: 400px;
-            max-width: 100%;
             display: block;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
             margin: 0 auto;
         }
 
         .title {
-            margin: 28px 0 40px;
-            font-size: 35px;
+            margin: 24px 0 30px;
+            font-size: 26px;
+            line-height: 1.6;
             font-weight: bold;
             color: #172b4d;
             text-align: center;
+            overflow-wrap: anywhere;
         }
 
-.content {
-    display: flex;
-    align-items: stretch;
-    justify-content: flex-start;
-    gap: 15px;
-}
+        .content {
+            display: flex;
+            align-items: stretch;
+            justify-content: flex-start;
+            gap: 10px;
+        }
 
-.text {
-    flex: 0 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 22px;
-    line-height: 1.8;
-    color: #333333;
-}
+        .text {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 12px;
+            font-size: 17px;
+            line-height: 1.8;
+            color: #333333;
+            overflow-wrap: anywhere;
+        }
 
-.gif {
-    width: 60px;
-    align-self: stretch;
-    object-fit: fill;
-}
-
+        .gif {
+            width: 60px;
+            flex-shrink: 0;
+            align-self: stretch;
+            object-fit: fill;
+        }
 
         footer {
             width: 100%;
-            min-height: 80px;
-            padding: 0 30px;
+            min-height: 70px;
+            padding: 10px 14px;
             background-color: #1677c8;
             display: flex;
             align-items: center;
-            gap: 30px;
+            justify-content: space-between;
+            gap: 12px;
         }
 
         footer p {
+            flex: 1;
+            min-width: 0;
             margin: 0;
             color: black;
-            font-size: 14px;
+            font-size: 11px;
+            line-height: 1.6;
+            overflow-wrap: anywhere;
         }
 
         footer img {
-            height: 80px;
+            height: 60px;
+            max-width: 70px;
             width: auto;
+            flex-shrink: 0;
+            object-fit: contain;
+        }
+
+        @media (max-width: 360px) {
+            .banxin {
+                padding: 16px 12px 24px;
+            }
+
+            .title {
+                font-size: 23px;
+            }
+
+            .text {
+                font-size: 15px;
+            }
+
+            .gif {
+                width: 50px;
+            }
+
+            footer {
+                padding: 10px;
+                gap: 8px;
+            }
+
+            footer p {
+                font-size: 10px;
+            }
+
+            footer img {
+                height: 50px;
+                max-width: 55px;
+            }
         }
     </style>
 </head>
@@ -98,7 +146,7 @@
 
     <div class="banxin">
         <div class="top">
-            <img src="3.2.png">
+            <img src="3.2.png" alt="">
         </div>
 
         <div class="title">
@@ -111,13 +159,13 @@
                 <div>工商你的胆子真是肥嘟嘟的</div>
             </div>
 
-            <img class="gif" src="1.2.gif">
+            <img class="gif" src="1.2.gif" alt="">
         </div>
     </div>
 
     <footer>
         <p>© 2021 NEXON Korea Corp. &amp; NEXON GAMES Co., Ltd. All Rights Reserved.</p>
-        <img src="4.png">
+        <img src="4.png" alt="">
     </footer>
 
 </body>
